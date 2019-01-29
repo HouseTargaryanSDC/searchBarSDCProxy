@@ -54,6 +54,9 @@ proxy.get('/api/search/:searched', (req, res) => {
   // axios.get(`http://3.86.82.182:9004/api/search/${searched}`)
     .then(({data}) => {
       res.status(200).send(data);
+    })
+    .catch((err) => {
+      console.error(err);
     });
 });
 
